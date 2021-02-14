@@ -108,6 +108,7 @@ function App(props) {
   //
   // Then read your DAI balance like:
   //const myMainnetBalance = useContractReader({DAI: mainnetDAIContract},"DAI", "balanceOf",["0x34aA3F359A9D614239015126635CE7732c18fDF3"])
+  //console.log("💲 myMainnetBalance:",myMainnetBalance)
   //
 
   // keep track of a variable from the contract in the local React state:
@@ -140,7 +141,7 @@ function App(props) {
     )
   }else{
     networkDisplay = (
-      <div style={{zIndex:2, position:'absolute', right:154,top:28,padding:16,color:targetNetwork.color}}>
+      <div style={{zIndex:-1, position:'absolute', right:154,top:28,padding:16,color:targetNetwork.color}}>
         {targetNetwork.name}
       </div>
     )
@@ -163,8 +164,10 @@ function App(props) {
   }, [setRoute]);
 
   let faucetHint = ""
+  const faucetAvailable = localProvider && localProvider.connection && localProvider.connection.url && localProvider.connection.url.indexOf(window.location.hostname)>=0 && !process.env.REACT_APP_PROVIDER && price > 1;
+
   const [ faucetClicked, setFaucetClicked ] = useState( false );
-    if(!faucetClicked&&localProvider&&localProvider._network&&localProvider._network.chainId==31337&&yourLocalBalance&&formatEther(yourLocalBalance)<=0){
+  if(!faucetClicked&&localProvider&&localProvider._network&&localProvider._network.chainId==31337&&yourLocalBalance&&formatEther(yourLocalBalance)<=0){
     faucetHint = (
       <div style={{padding:16}}>
         <Button type={"primary"} onClick={()=>{
@@ -323,7 +326,7 @@ function App(props) {
              {
 
                /*  if the local provider has a signer, let's show the faucet:  */
-               localProvider && localProvider.connection && localProvider.connection.url && localProvider.connection.url.indexOf(window.location.hostname)>=0 && !process.env.REACT_APP_PROVIDER && price > 1 ? (
+               faucetAvailable ? (
                  <Faucet localProvider={localProvider} price={price} ensProvider={mainnetProvider}/>
                ) : (
                  ""

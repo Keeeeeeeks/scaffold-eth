@@ -31,7 +31,7 @@ export const NETWORKS = {
     },
     mainnet: {
         name: "mainnet",
-        color: '#ffffff',
+        color: '#ff8b9e',
         chainId: 1,
         rpcUrl: `https://mainnet.infura.io/v3/${INFURA_ID}`,
         blockExplorer: "https://etherscan.io/",
@@ -87,5 +87,15 @@ export const NETWORKS = {
         rpcUrl: "https://rpc-mainnet.maticvigil.com",
         faucet: "https://faucet.matic.network/",
         blockExplorer: "https://explorer-mainnet.maticvigil.com//",
+    },
+    mumbai: {
+        name: "mumbai",
+        color: '#92D9FA',
+        chainId: 80001,
+        price: 1,
+        gasPrice:1000000000,
+        rpcUrl: "https://rpc-mumbai.maticvigil.com",
+        faucet: "https://faucet.matic.network/",
+        blockExplorer: "https://mumbai-explorer.matic.today/",
     }
 }
