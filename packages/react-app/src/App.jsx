@@ -8,13 +8,14 @@ import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { useUserAddress } from "eth-hooks";
 import { useExchangePrice, useGasPrice, useUserProvider, useContractLoader, useContractReader, useEventListener, useBalance, useExternalContractLoader } from "./hooks";
-import { Header, Account, Faucet, Ramp, Contract, GasGauge, ThemeSwitch } from "./components";
+import { Header, Account, Faucet, Ramp, Contract, GasGauge, ThemeSwitch, Vorple2 } from "./components";
 import { Transactor } from "./helpers";
 import { formatEther, parseEther } from "@ethersproject/units";
 //import Hints from "./Hints";
-import { Hints, ExampleUI, Subgraph } from "./views"
+import { Hints, ExampleUI, Subgraph } from "./views";
 import { useThemeSwitcher } from "react-css-theme-switcher";
 import { INFURA_ID, DAI_ADDRESS, DAI_ABI, NETWORK, NETWORKS } from "./constants";
+
 /*
     Welcome to 🏗 scaffold-eth !
 
@@ -36,7 +37,7 @@ import { INFURA_ID, DAI_ADDRESS, DAI_ABI, NETWORK, NETWORKS } from "./constants"
 
 
 /// 📡 What chain are your contracts deployed to?
-const targetNetwork = NETWORKS['localhost']; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const targetNetwork = NETWORKS['ropsten']; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
 const DEBUG = true
@@ -79,7 +80,7 @@ function App(props) {
   // Use your injected provider from 🦊 Metamask or if you don't have it then instantly generate a 🔥 burner wallet.
   const userProvider = useUserProvider(injectedProvider, localProvider);
   const address = useUserAddress(userProvider);
-  if(DEBUG) console.log("👩‍💼 selected address:",address)
+  if(DEBUG) console.log("👩‍💼 selected address:",address, typeof(address))
 
   // You can warn the user if you would like them to be on a specific network
   let localChainId = localProvider && localProvider._network && localProvider._network.chainId
@@ -111,6 +112,9 @@ function App(props) {
   // If you want to make 🔐 write transactions to your contracts, use the userProvider:
   const writeContracts = useContractLoader(userProvider)
   if(DEBUG) console.log("🔐 writeContracts",writeContracts)
+
+  const vorpAddress = "0x2A9B2b62B8952BEabB7ec7c9d2DA15EFafAFDff8"
+  if(DEBUG) console.log("Vorple address is:", vorpAddress, typeof(vorpAddress))
 
   // EXTERNAL CONTRACT EXAMPLE:
   //
@@ -201,7 +205,7 @@ function App(props) {
     <div className="App">
 
       {/* ✏️ Edit the header and change the title to your project name */}
-      <Header />
+      <Header title="Liminal"/>
       {networkDisplay}
       <BrowserRouter>
 
@@ -220,6 +224,9 @@ function App(props) {
           </Menu.Item>
           <Menu.Item key="/subgraph">
             <Link onClick={()=>{setRoute("/subgraph")}} to="/subgraph">Subgraph</Link>
+          </Menu.Item>
+          <Menu.Item key="/vorple2">
+            <Link onClick={()=>{setRoute("/vorple2")}} to="/vorple2">Vorple</Link>
           </Menu.Item>
         </Menu>
 
@@ -300,6 +307,18 @@ function App(props) {
             tx={tx}
             writeContracts={writeContracts}
             mainnetProvider={mainnetProvider}
+            />
+          </Route>
+          {/*GET ADDRESS-GATED VORPLE RUNNING IN SCAFFOLD */}
+          <Route path="/vorple2">
+            <Vorple2
+            address={address}
+            VorpAddress={vorpAddress}
+            userProvider={userProvider}
+            mainnetProvider={mainnetProvider}
+            localProvider={localProvider}
+            tx={tx}
+            writeContracts={writeContracts}
             />
           </Route>
         </Switch>
