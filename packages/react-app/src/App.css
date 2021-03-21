@@ -42,6 +42,10 @@ vorple-section {
 
 }
 
+.push {
+  height: 80px;
+}
+
 .mote-copy {
   width: 100%;
     animation: Home-appear 0.2s;

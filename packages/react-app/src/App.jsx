@@ -14,7 +14,7 @@ import { formatEther, parseEther } from "@ethersproject/units";
 //import Hints from "./Hints";
 import { Hints, ExampleUI, Subgraph } from "./views";
 import { useThemeSwitcher } from "react-css-theme-switcher";
-import { INFURA_ID, DAI_ADDRESS, DAI_ABI, NETWORK, NETWORKS } from "./constants";
+import { INFURA_ID, DAI_ADDRESS, DAI_ABI, NETWORK, NETWORKS, ACCEPTED_ADDRESS } from "./constants";
 
 /*
     Welcome to 🏗 scaffold-eth !
@@ -35,9 +35,20 @@ import { INFURA_ID, DAI_ADDRESS, DAI_ABI, NETWORK, NETWORKS } from "./constants"
     (and then use the `useExternalContractLoader()` hook!)
 */
 
+/*
 
+
+Post-Hackathon TODO:
+1. ERC20s -> ZNFT
+  Pay for a $PAGE in a $BOOK
+2. 
+
+
+*/
+
+/// TODO 3/20 fix this 'cant read property name error, it's happening here"
 /// 📡 What chain are your contracts deployed to?
-const targetNetwork = NETWORKS['ropsten']; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const targetNetwork = NETWORKS['rinkeby']; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
 const DEBUG = true
@@ -113,8 +124,8 @@ function App(props) {
   const writeContracts = useContractLoader(userProvider)
   if(DEBUG) console.log("🔐 writeContracts",writeContracts)
 
-  const vorpAddress = "0x2A9B2b62B8952BEabB7ec7c9d2DA15EFafAFDff8"
-  if(DEBUG) console.log("Vorple address is:", vorpAddress, typeof(vorpAddress))
+  const vorpAddress = String(process.env.REACT_APP_ETH_ADDRESS)
+  if(DEBUG) console.log("🕵🏻‍♂️Vorple address is:", vorpAddress, typeof(vorpAddress))
 
   // EXTERNAL CONTRACT EXAMPLE:
   //
@@ -205,7 +216,7 @@ function App(props) {
     <div className="App">
 
       {/* ✏️ Edit the header and change the title to your project name */}
-      <Header title="Liminal"/>
+      <Header title="Gestalt: write your own chapter "/>
       {networkDisplay}
       <BrowserRouter>
 
@@ -311,15 +322,18 @@ function App(props) {
           </Route>
           {/*GET ADDRESS-GATED VORPLE RUNNING IN SCAFFOLD */}
           <Route path="/vorple2">
-            <Vorple2
-            address={address}
-            VorpAddress={vorpAddress}
-            userProvider={userProvider}
-            mainnetProvider={mainnetProvider}
-            localProvider={localProvider}
-            tx={tx}
-            writeContracts={writeContracts}
-            />
+            {address == vorpAddress ? 
+              <Vorple2
+              address={address}
+              userProvider={userProvider}
+              mainnetProvider={mainnetProvider}
+              localProvider={localProvider}
+              tx={tx}
+              writeContracts={writeContracts}
+              />
+            : 
+            <span>wrong address, try again</span>
+            }
           </Route>
         </Switch>
       </BrowserRouter>
