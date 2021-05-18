@@ -6,35 +6,34 @@ import "hardhat/console.sol";
 
 contract YourContract {
 
-  uint public count;
-
-  // Function to get the current count
-  function get() public view returns (uint) {
-    return count;
-  }
-
-  function inc() public {
-    count += 1;
-  }
-
-    function dec() public {
-    count -= 1;
-  }
-
   event SetPurpose(address sender, string purpose);
 
   string public purpose = "Building Unstoppable Apps";
 
-  constructor() {
+  constructor() public {
     // what should we do on deploy?
   }
 
+  uint8 public count = 5;
+
+    // Function to get the current count
+    function get() public view returns (uint) {
+        return count;
+    }
+
+    // Function to increment count by 1
+    function inc() public {
+        count += 1;
+    }
+
+    // Function to decrement count by 1
+    function dec() public {
+        count -= 1;
+    }
   function setPurpose(string memory newPurpose) public {
     purpose = newPurpose;
     console.log(msg.sender,"set purpose to",purpose);
     emit SetPurpose(msg.sender, purpose);
   }
-
-
 
 }

@@ -48,7 +48,7 @@ Post-Hackathon TODO:
 
 /// TODO 3/20 fix this 'cant read property name error, it's happening here"
 /// 📡 What chain are your contracts deployed to?
-const targetNetwork = NETWORKS['rinkeby']; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const targetNetwork = NETWORKS['ropsten']; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
 const DEBUG = true
@@ -126,6 +126,10 @@ function App(props) {
 
   const vorpAddress = String(process.env.REACT_APP_ETH_ADDRESS)
   if(DEBUG) console.log("🕵🏻‍♂️Vorple address is:", vorpAddress, typeof(vorpAddress))
+
+  const storyFile = String(process.env.REACT_APP_STORY_FILE)
+  if(DEBUG) console.log("🕵🏻‍♂️Story file is:", storyFile, typeof(storyFile))
+
 
   // EXTERNAL CONTRACT EXAMPLE:
   //
@@ -329,6 +333,7 @@ function App(props) {
               mainnetProvider={mainnetProvider}
               localProvider={localProvider}
               tx={tx}
+              storyFile={storyFile}
               writeContracts={writeContracts}
               />
             : 

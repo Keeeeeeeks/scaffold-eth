@@ -10,6 +10,9 @@ export const BLOCKNATIVE_DAPPID = "0b58206a-f3c0-4701-a62f-73c7243e8c77"
 //accepted address for vorple TODO: fix the .env prob
 export const ACCEPTED_ADDRESS = "REACT_APP_ETH_ADDRESS"
 
+//story file for vorple TODO: make it so that Vorple can select from a list
+export const STORY_FILE = "REACT_APP_STORY_FILE"
+
 // EXTERNAL CONTRACTS
 
 export const DAI_ADDRESS = "0x6B175474E89094C44Da98b954EedeAC495271d0F"
