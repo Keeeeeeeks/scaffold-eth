@@ -326,7 +326,6 @@ function App(props) {
           </Route>
           {/*GET ADDRESS-GATED VORPLE RUNNING IN SCAFFOLD */}
           <Route path="/vorple2">
-            {address == vorpAddress ? 
               <Vorple2
               address={address}
               userProvider={userProvider}
@@ -336,9 +335,6 @@ function App(props) {
               storyFile={storyFile}
               writeContracts={writeContracts}
               />
-            : 
-            <span>wrong address, try again</span>
-            }
           </Route>
         </Switch>
       </BrowserRouter>
