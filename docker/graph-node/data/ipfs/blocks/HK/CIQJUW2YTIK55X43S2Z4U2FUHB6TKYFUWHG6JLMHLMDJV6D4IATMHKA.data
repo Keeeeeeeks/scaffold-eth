@@ -1,0 +1,30 @@
+
+úòdataSources:
+  - kind: ethereum/contract
+    mapping:
+      abis:
+        - file:
+            /: /ipfs/Qme7FB3Q2KpxFtzcDHKB8mwjcnboZUNDt3TqM57gwMhQcB
+          name: YourContract
+      apiVersion: 0.0.4
+      entities:
+        - Purpose
+        - Sender
+      eventHandlers:
+        - event: 'SetPurpose(address,string)'
+          handler: handleSetPurpose
+      file:
+        /: /ipfs/QmeyqAjwigahU54ooF4UAHtYdjYttFQJEVDsXACFHDQz2G
+      kind: ethereum/events
+      language: wasm/assemblyscript
+    name: YourContract
+    network: localhost
+    source:
+      abi: YourContract
+      address: '0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0'
+      startBlock: 1
+schema:
+  file:
+    /: /ipfs/QmR4nRiqtQQRLqzD2CoUNtzjswuLbvU4bqXgneoJRU6VVJ
+specVersion: 0.0.2
+ò
