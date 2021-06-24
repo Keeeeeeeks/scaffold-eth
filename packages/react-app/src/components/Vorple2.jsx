@@ -6,8 +6,8 @@ import Web3Modal from "web3modal";
 //import { useExchangePrice, useGasPrice, useUserProvider, useContractLoader, useContractReader, useEventListener, useBalance } from "../hooks";
 import { Account, Address } from "../components";
 import {wikipedia_query, jump, wiki} from "../books/everything.js"
-import "vorple/lib/css/vorple.css";
-
+//import "vorple/lib/css/vorple.css";
+//import "App.css";
 /* ****TODO:********
 1. [DONE, window. errthang] Figure out how to call external JS files in the story
 2. Figure out how to call JS modules in the story
@@ -28,28 +28,29 @@ var storyFile1 = toString("../books/3AW4.ulx");
 window.wikipedia_query = wikipedia_query;
 window.jump = jump;
 window.wiki = wiki;
-window.addresss = Address.address;
+window.address = toString(Address.address);
 window.storyFile1 = storyFile1;
 
-function checkAdd() {
-    return (window.address);
-};
 
-function addressTest() {
-    return window.addresss;
-};
-
-export default function Vorple2( address, vorpAddress, userProvider, mainnetProvider, localProvider, storyFile1) {
+export default function Vorple2( props, address, vorpAddress, userProvider, mainnetProvider, localProvider, storyFile1) {
     // Reference to the element we use as the interpreter container
     const containerRef = useRef(null);
     const FS = vorple.file.getFS();
 
+    //Code block from Jha to make addr work
+    useEffect (() => {
+        window.address = (props.address);
+    }, [props.address]);
+
+    useEffect (() => {
+        window.address = (props.address);
+    }, [props.address]);
 
     useEffect(() => {
         if( containerRef ) {
             vorple.options = {
                 // URL to the game file
-                story: "3AW4.ulx",
+                story: "serinette.ulx",
                 //story: "../src/books/3AW4.ulx",
                 //story: storyFile1,
 
@@ -69,6 +70,8 @@ export default function Vorple2( address, vorpAddress, userProvider, mainnetProv
             vorple.init();
         } 
     }, [ containerRef ]);
+
+    
 
 
         return (

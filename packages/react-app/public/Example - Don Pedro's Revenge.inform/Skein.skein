@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+
+<Skein rootNode="node-1079">
+    <generator>Inform Mac Client (Inform version )</generator>
+    <item nodeId="node-1079">
+        <command xml:space="preserve">Example - Don Pedro's Revenge</command>
+        <result xml:space="preserve">
+
+
+Don Pedro's Revenge
+An Interactive Fiction
+Release 1 / Serial number 210520 / Inform 7 build 6M62 (I6/v6.34 lib 6/12N) SD
+
+Deck of the Helene Marie
+The two crews are embattled all around you, but your attention is reserved for your particular enemy: Don Pedro.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1082"></child>
+        </children>
+    </item>
+    <item nodeId="node-1082">
+        <command xml:space="preserve">retreat</command>
+        <result xml:space="preserve">
+You protect yourself, but end up wedged in between two barrels.
+
+Trapped between your barrels, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1083"></child>
+        </children>
+    </item>
+    <item nodeId="node-1083">
+        <command xml:space="preserve">leave</command>
+        <result xml:space="preserve">
+But you aren't in anything at the moment.
+
+Trapped between your barrels, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1084"></child>
+        </children>
+    </item>
+    <item nodeId="node-1084">
+        <command xml:space="preserve">escape</command>
+        <result xml:space="preserve">
+That's not a verb I recognise.
+
+Trapped between your barrels, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1085"></child>
+        </children>
+    </item>
+    <item nodeId="node-1085">
+        <command xml:space="preserve">advance</command>
+        <result xml:space="preserve">
+You push forward aggressively, making your way to the open deck.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1086"></child>
+        </children>
+    </item>
+    <item nodeId="node-1086">
+        <command xml:space="preserve">advance</command>
+        <result xml:space="preserve">
+You push forward aggressively, making your way to the open deck.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1087"></child>
+        </children>
+    </item>
+    <item nodeId="node-1087">
+        <command xml:space="preserve">advance</command>
+        <result xml:space="preserve">
+You push forward aggressively, making your way to the open deck.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1088"></child>
+        </children>
+    </item>
+    <item nodeId="node-1088">
+        <command xml:space="preserve">advance</command>
+        <result xml:space="preserve">
+You push forward aggressively, making your way to the open deck.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1089"></child>
+        </children>
+    </item>
+    <item nodeId="node-1089">
+        <command xml:space="preserve">attack</command>
+        <result xml:space="preserve">
+What do you want to attack?
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1090"></child>
+        </children>
+    </item>
+    <item nodeId="node-1090">
+        <command xml:space="preserve">attack don pedro</command>
+        <result xml:space="preserve">
+You can't see any such thing.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1091"></child>
+        </children>
+    </item>
+    <item nodeId="node-1091">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">
+Deck of the Helene Marie
+The two crews are embattled all around you, but your attention is reserved for your particular enemy: Don Pedro.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1092"></child>
+        </children>
+    </item>
+    <item nodeId="node-1092">
+        <command xml:space="preserve">jump</command>
+        <result xml:space="preserve">
+You leap and swing yourself boldly up into the rigging, leaving your attackers beneath you.
+
+Able to slice at your attackers but not to advance or retreat, you choose to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1093"></child>
+        </children>
+    </item>
+    <item nodeId="node-1093">
+        <command xml:space="preserve">test</command>
+        <result xml:space="preserve">
+&gt;--&gt; The following tests are available:
+'test me'
+Able to slice at your attackers but not to advance or retreat, you choose to </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1094"></child>
+        </children>
+    </item>
+    <item nodeId="node-1094">
+        <command xml:space="preserve">test me</command>
+        <result xml:space="preserve">
+(Testing.)
+
+Able to slice at your attackers but not to advance or retreat, you choose to [1] advance
+
+You can't move forward from here, only slash.
+
+Able to slice at your attackers but not to advance or retreat, you choose to [2] jump
+
+You leap down from your position, into the middle of the deck.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to [3] advance
+
+You push forward aggressively, making your way to the open deck.
+
+Out on the open deck with no impediments, free to advance or retreat, you decide to [4] retreat
+
+You protect yourself, but end up wedged in between two barrels.
+
+So securely boxed-in that you can really only parry or thrust, you try to [5] jump
+
+You leap and swing yourself boldly up into the rigging, leaving your attackers beneath you.
+
+Perched up here with the advantage of height (but little mobility), you attempt to [6] retreat
+
+You can't move backward or parry very successfully from this position.
+
+Able to slice at your attackers but not to advance or retreat, you choose to [7] retreat
+
+You can't move backward or parry very successfully from this position.
+
+Perched up here with the advantage of height (but little mobility), you attempt to [8] advance
+
+You can't move forward from here, only slash.
+
+Able to slice at your attackers but not to advance or retreat, you choose to </result>
+        <commentary xml:space="preserve">[1] advance
+[2] jump
+[3] advance
+[4] retreat
+[5] jump
+[6] retreat
+[7] retreat
+[8] advance
+</commentary>
+        <children></children>
+    </item>
+</Skein>

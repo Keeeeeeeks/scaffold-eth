@@ -1,0 +1,38 @@
+! Blurb file created by Inform build 6M62
+
+status "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/CblorbModel.html" "/Users/georgefamutimi/Desktop/ETH hackathon/NFT Hackathon Repo/scaffold-eth/packages/react-app/public/Example - Don Pedro's Revenge.inform/Build/StatusCblorb.html"
+
+
+! Identification
+
+project folder "/Users/georgefamutimi/Desktop/ETH hackathon/NFT Hackathon Repo/scaffold-eth/packages/react-app/public/Example - Don Pedro's Revenge.inform"
+release to "/Users/georgefamutimi/Desktop/ETH hackathon/NFT Hackathon Repo/scaffold-eth/packages/react-app/public/Example - Don Pedro's Revenge.materials/Release"
+
+! Blorb instructions
+
+storyfile leafname "Don Pedro's Revenge.gblorb"
+storyfile "/Users/georgefamutimi/Desktop/ETH hackathon/NFT Hackathon Repo/scaffold-eth/packages/react-app/public/Example - Don Pedro's Revenge.inform/Build/output.ulx" include
+ifiction "/Users/georgefamutimi/Desktop/ETH hackathon/NFT Hackathon Repo/scaffold-eth/packages/react-app/public/Example - Don Pedro's Revenge.inform/Metadata.iFiction" include
+cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+
+! Placeholder variables
+
+placeholder [IFID] = "E1EC7463-E57F-4BA1-A7FD-7D9BDC2176B7"
+placeholder [RELEASE] = "1"
+placeholder [YEAR] = "2021"
+placeholder [TITLE] = "Don Pedro's Revenge"
+placeholder [AUTHOR] = "Anonymous"
+placeholder [BLURB] = "A work of interactive fiction."
+
+! Other material to release
+
+status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc405.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc406.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc401.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||

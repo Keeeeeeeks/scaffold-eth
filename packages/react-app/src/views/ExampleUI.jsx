@@ -10,6 +10,7 @@ export default function ExampleUI({purpose, setPurposeEvents, address, mainnetPr
 
   const [newPurpose, setNewPurpose] = useState("loading...");
 
+
   return (
     <div>
       {/*
@@ -220,5 +221,17 @@ export default function ExampleUI({purpose, setPurposeEvents, address, mainnetPr
 
 
     </div>
+  );
+}
+
+function Counter({initialCount}) {
+  const [count, setCount] = useState(initialCount);
+  return (
+    <>
+      Count: {count}
+      <button onClick={() => setCount(initialCount)}>Reset</button>
+      <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+    </>
   );
 }
